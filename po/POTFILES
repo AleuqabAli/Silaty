@@ -1,0 +1,7 @@
+data/org.silaty.Silaty.desktop.in
+data/org.silaty.Silaty.appdata.xml.in
+data/org.silaty.Silaty.gschema.xml
+src/window.ui
+src/main.vala
+src/window.vala
+
