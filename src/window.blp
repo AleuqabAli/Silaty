@@ -1,0 +1,38 @@
+using Gtk 4.0;
+using Adw 1;
+
+menu primary_menu {
+  section {
+    item {
+      label: _("_Preferences");
+      action: "app.preferences";
+      accel: "<primary>p";
+    }
+
+    item {
+      label: _("_Keyboard Shortcuts");
+      action: "win.show-help-overlay";
+    }
+    
+    item {
+      label: _("_About silaty");
+      action: "app.about";
+    }
+  }
+}
+
+
+template SilatyWindow : Gtk.ApplicationWindow {
+  default-width : 600;
+  default-height : 300;
+
+  [titlebar]
+  Adw.HeaderBar {
+  	[end]
+  	Gtk.MenuButton {
+  		icon-name : "open-menu-symbolic";
+  		menu-model: primary_menu;
+  	}
+  	
+  }
+}
